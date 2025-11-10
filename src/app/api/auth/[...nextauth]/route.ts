@@ -22,7 +22,7 @@ export const NextOption: NextAuthOptions = {
           name: data.user.name,
           email: data.user.email,
           role: data.user.role,
-          token: data.token, // 👈 ده هو JWT اللي السيرفر بيولّده
+          token: data.token, 
         };
       },
     }),
@@ -35,7 +35,7 @@ export const NextOption: NextAuthOptions = {
         token.name = user.name;
         token.email = user.email;
         token.role = user.role;
-        token.accessToken = user.token; // 👈 لازم اسمه كده
+        token.accessToken = user.token; 
       }
       return token;
     },
@@ -47,12 +47,12 @@ export const NextOption: NextAuthOptions = {
         email: token.email,
         role: token.role,
       };
-      session.accessToken = token.accessToken; // 👈 هنا كده يتحط نفس التوكن
+      session.accessToken = token.accessToken; 
       return session;
     },
   },
 
-  secret: process.env.SECRET_KEY, // 👈 خليها نفس السر اللي في السيرفر
+  secret: process.env.SECRET_KEY, 
 };
 
 const handler = NextAuth(NextOption);
