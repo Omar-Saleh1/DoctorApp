@@ -81,7 +81,7 @@ export default function Register() {
   // ✅ Submit handler
   async function handleRegister(values: RegisterFormValues) {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/register`, {
+      const res = await fetch(`https://apidoctor.onrender.com/user/register`, {
         method: "POST",
         body: JSON.stringify(values),
         headers: { "Content-Type": "application/json" },

@@ -21,7 +21,7 @@ export default function AllDoctor() {
 
   async function GetAllDoctor() {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/doctors/allDoctors`);
+      const res = await fetch(`https://apidoctor.onrender.com/doctors/allDoctors`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Failed to fetch doctors');
       setDoctors(data)
@@ -58,7 +58,7 @@ export default function AllDoctor() {
                     <img
                       src={
                         doc.image
-                          ? `${process.env.NEXT_PUBLIC_API_URL}/uploads/${doc.image}`
+                          ? `https://apidoctor.onrender.com/uploads/${doc.image}`
                           : "/default-doctor.jpg"
                       }
                       alt={doc.name}

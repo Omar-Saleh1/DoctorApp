@@ -33,7 +33,7 @@ export default function MyAppointments() {
         const token = session?.accessToken ;
 
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/appointments/myAppointments`,
+          `https://apidoctor.onrender.com/appointments/myAppointments`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -59,7 +59,7 @@ export default function MyAppointments() {
         session?.accessToken
 
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/appointments/deleteAppointment/${id}`,
+        `$https://apidoctor.onrender.com/appointments/deleteAppointment/${id}`,
         {
           method: "POST",
           headers: {

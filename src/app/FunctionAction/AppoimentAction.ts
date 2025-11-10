@@ -4,7 +4,7 @@ import { FormValues } from "../(main)/ADDdoctors/page";
 
 export default async function fetchDoctors() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/doctors/allDoctors`);
+    const res = await fetch(`https://apidoctor.onrender.com/doctors/allDoctors`);
     if (!res.ok) throw new Error("Failed to fetch");
     const data = await res.json();
     return { success: true, data };
@@ -15,7 +15,7 @@ export default async function fetchDoctors() {
 
 export async function handleAppointments(values: FormValues, token: string) {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/appointments/createAppointment`, {
+    const res = await fetch(`https://apidoctor.onrender.com/appointments/createAppointment`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
