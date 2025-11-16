@@ -60,7 +60,7 @@ export default function page() {
             <img
               src={
                 doctor.image
-                  ? `http://localhost:5000/uploads/${doctor.image}`
+                  ? `https://apidoctor.onrender.com/uploads/${doctor.image}`
                   : "/default-doctor.jpg"
               }
               alt={doctor.name}

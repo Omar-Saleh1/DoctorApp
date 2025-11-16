@@ -101,7 +101,7 @@ export default function MyAppointments() {
       appointments.map((app) => {
         const doctor = app.doctor;
         const doctorImage = doctor?.image
-          ? `http://localhost:5000/uploads/${doctor.image}`
+          ? `https://apidoctor.onrender.com/uploads/${doctor.image}`
           : "/default-doctor.jpg";
 
         return (

@@ -56,9 +56,11 @@ export default function AllDoctor() {
                   {/* Doctor Image */}
                   <div className="relative mx-auto w-40 h-40 rounded-full overflow-hidden shadow-md ring-4 ring-blue-100 group-hover:ring-blue-400 transition-all duration-300">
                     <img
-                      src={doc.image? '${procces.env.NEXT_PUBLIC_API_URL}/uploads/${doc.image}'
-                          : "/default-doctor.jpg"
-                      }
+                       src={
+                doc.image
+                  ? `https://apidoctor.onrender.com/uploads/${doc.image}`
+                  : "/default-doctor.jpg"
+              } 
                       alt={doc.name}
                       className="w-full h-full object-cover"
                     />
