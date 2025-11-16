@@ -109,7 +109,6 @@ export default function MyAppointments() {
             key={app._id}
             className="group relative bg-white/80 backdrop-blur-md border border-gray-100 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 p-6 overflow-hidden"
           >
-            {/* خلفية متدرجة خفيفة */}
             <div className="absolute inset-0 bg-gradient-to-tr from-teal-100 via-transparent to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
 
             <div className="relative flex flex-col items-center text-center z-10">
