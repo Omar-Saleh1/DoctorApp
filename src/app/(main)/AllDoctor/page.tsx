@@ -58,7 +58,7 @@ export default function AllDoctor() {
                     <img
                        src={
                 doc.image
-                  ? `https://apidoctor.onrender.com/uploads/${doc.image}`
+                  ? `${process.env.NEXT_PUBLIC_API_URL}/uploads/${doc.image}`
                   : "/default-doctor.jpg"
               } 
                       alt={doc.name}
