@@ -24,7 +24,7 @@ export default function page() {
 
   async function getDoctor() {
     try {
-      const res = await fetch(`https://apidoctor.onrender.com/doctors/${id}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/doctors/${id}`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Failed to fetch doctor details");
       setDoctor(data);

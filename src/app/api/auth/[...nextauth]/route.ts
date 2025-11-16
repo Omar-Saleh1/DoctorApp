@@ -8,7 +8,7 @@ export const NextOption: NextAuthOptions = {
       name: "Credentials",
       credentials: { email: {}, password: {} },
       async authorize(credentials) {
-        const res = await fetch(`https://apidoctor.onrender.com/user/signin`, {
+        const res = await fetch(`${procces.env.NEXT_PUBLIC_API_URL}/user/signin`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(credentials),

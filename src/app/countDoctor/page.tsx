@@ -12,13 +12,13 @@ function CountDoctor() {
     }, [])
 
     async function fetchDepartmentsCount() {
-        const departments = await fetch(`https://apidoctor.onrender.com/departments/count`)  
+        const departments = await fetch(`${procces.env.NEXT_PUBLIC_API_URL}/departments/count`)  
         const data = await departments.json()
         setDepartments(data.count || 0)
     }
 
     async function fetchDoctorCount() {
-        const doctors = await fetch(`https://apidoctor.onrender.com/doctors/count`)   
+        const doctors = await fetch(`${procces.env.NEXT_PUBLIC_API_URL}/doctors/count`)   
         const data = await doctors.json()
         setCountDoctor(data.count || 0)
     } 

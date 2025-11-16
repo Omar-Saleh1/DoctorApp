@@ -21,7 +21,7 @@ export default function AllDoctor() {
 
   async function GetAllDoctor() {
     try {
-      const res = await fetch(`https://apidoctor.onrender.com/doctors/allDoctors`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/doctors/allDoctors`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Failed to fetch doctors');
       setDoctors(data.slice(0, 3))
@@ -56,7 +56,7 @@ export default function AllDoctor() {
                   {/* Doctor Image */}
                   <div className="relative mx-auto w-40 h-40 rounded-full overflow-hidden shadow-md ring-4 ring-blue-100 group-hover:ring-blue-400 transition-all duration-300">
                     <img
-                      src={doc.image? 'https://apidoctor.onrender.com/uploads/${doc.image}'
+                      src={doc.image? '${procces.env.NEXT_PUBLIC_API_URL}/uploads/${doc.image}'
                           : "/default-doctor.jpg"
                       }
                       alt={doc.name}

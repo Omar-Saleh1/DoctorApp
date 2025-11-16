@@ -14,7 +14,7 @@ export async function getAddDoctor(values: FormDoctor, token: string) {
 
     if (values.image) formData.append("image", values.image);
 
-    const res = await fetch(`https://apidoctor.onrender.com/doctors/addDoctors`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/doctors/addDoctors`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
